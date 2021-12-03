@@ -1,0 +1,12 @@
+from pymongo import MongoClient
+client = MongoClient('localhost', 27017)
+db = client['persondetails']
+collection = db['PersonInfo']
+for doc1 in collection.find():
+    print(doc1)
+
+OUTPUT:-
+{'_id': ObjectId('619dd31f5b42bb0d958a860a'), 'first_name': 'Geetha', 'last_name': 'Sharma', 'dob': '09-04-1988', 'mobile': '7944456435', 'email': 'geethasharma12@gmail.com'}
+{'_id': ObjectId('619dd32c5b42bb0d958a860b'), 'first_name': 'Raghav', 'last_name': 'Sharma', 'dob': '09-03-1889', 'mobile': '7944456799', 'email': 'raghavsharma12@gmail.com'}
+{'_id': ObjectId('619de6e23c816b8fa87b2d84'), 'First_Name': 'Akash', 'last_Name': 'Sharma', 'age': 23, 'mobile': 9862346577, 'Email': 'akashsharma12@gmail.com'}
+{'_id': ObjectId('619fa76bd5ef71a20d902ea4'), 'First_Name': 'Akash', 'last_Name': 'Sharma', 'age': 23, 'mobile': 9862346577, 'Email': 'akashsharma12@gmail.com'}
